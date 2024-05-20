@@ -5,10 +5,16 @@
 <head>
     <title>DC Comics</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-4">DC Comics</h1>
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>DC Comics Collection</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-4">
         <div class="row">
             @foreach ($comics as $comic)
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -26,6 +32,11 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 DC Comics. All rights reserved.</p>
+    </footer>
 </body>
 </html>
